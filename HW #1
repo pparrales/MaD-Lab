@@ -1,0 +1,10 @@
+#!/bin/bash
+for i in A_B-C_D 1_2-3_4 aa_bb-cc_dd; do
+	echo ${i%%_*} 
+	tmp=${i#*_}
+	echo ${tmp%-*}
+	echo ${tmp%_*}
+	echo ${i##*_}
+	tmp=${i%_*}
+	echo foo-${tmp%-*}
+done
